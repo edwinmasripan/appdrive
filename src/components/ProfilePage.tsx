@@ -336,7 +336,7 @@ const ProfilePage: React.FC = () => {
     if (instructor) {
       // Sanitize name for URL
       const urlName = instructor.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-      window.open(`/${instructor.postcode}/${urlName}`, '_blank');
+      window.open(`https://drivelessons.com.au/${instructor.postcode}/${urlName}`, '_blank');
     }
   };
 

@@ -554,7 +554,9 @@ const DashboardPage: React.FC = () => {
 
   const handleViewProfile = () => {
     if (instructor) {
-      window.open(`/instructor/${instructor.id}`, '_blank');
+      // Sanitize name for URL
+      const urlName = instructor.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      window.open(`https://drivelessons.com.au/${instructor.postcode}/${urlName}`, '_blank');
     }
   };
 
