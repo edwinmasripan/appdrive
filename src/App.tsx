@@ -1,14 +1,41 @@
-import React from 'react';
-import DashboardHeader from './components/DashboardHeader';
+//import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+import AuthPage from './components/AuthPage';
 import DashboardPage from './components/DashboardPage';
 import ProfilePage from './components/ProfilePage';
+import ScrollToTop from './components/ScrollToTop';
 
-const App: React.FC = () => (
-  <div>
-    <DashboardHeader />
-    <DashboardPage />
-    <ProfilePage />
-  </div>
-);
+function App() {
+  return (
+    <AuthProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="min-h-screen">
+          <Routes>
+            <Route path="/login" element={<AuthPage />} />
+            <Route 
+              path="/dashboard" 
+              element={
+                <ProtectedRoute>
+                  <DashboardPage />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/dashboard/profile" 
+              element={
+                <ProtectedRoute>
+                  <ProfilePage />
+                </ProtectedRoute>
+              } 
+            />
+          </Routes>
+        </div>
+      </Router>
+    </AuthProvider>
+  );
+}
 
 export default App;
