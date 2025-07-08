@@ -14,9 +14,9 @@ function App() {
         <ScrollToTop />
         <div className="min-h-screen">
           <Routes>
-            <Route path="/login" element={<AuthPage />} />
+            <Route path="/" element={<AuthPage />} />
             <Route 
-              path="/dashboard" 
+              path="/" 
               element={
                 <ProtectedRoute>
                   <DashboardPage />
@@ -24,7 +24,7 @@ function App() {
               } 
             />
             <Route 
-              path="/dashboard/profile" 
+              path="/profile" 
               element={
                 <ProtectedRoute>
                   <ProfilePage />
