@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, AlertCircle, CheckCircle, LogIn, UserPlus } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import Header from './Header';
-import Footer from './Footer';
+//import Header from './Header';
+//import Footer from './Footer';
 
 const AuthPage: React.FC = () => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -93,7 +93,6 @@ const AuthPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
       
       <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -271,7 +270,7 @@ const AuthPage: React.FC = () => {
         </div>
       </div>
 
-      <Footer />
+
     </div>
   );
 };

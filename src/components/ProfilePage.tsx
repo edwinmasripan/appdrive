@@ -128,7 +128,7 @@ const ProfilePage: React.FC = () => {
       if (error) {
         if (error.code === 'PGRST116') {
           // No instructor profile found, redirect to dashboard
-          navigate('/dashboard');
+          navigate('/');
           return;
         }
         throw error;
@@ -363,7 +363,7 @@ const ProfilePage: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Profile Not Found</h2>
             <p className="text-gray-600 mb-6">Please create your instructor profile first.</p>
             <button
-              onClick={() => navigate('/dashboard')}
+              onClick={() => navigate('/')}
               className="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors"
             >
               Go to Dashboard
@@ -384,7 +384,7 @@ const ProfilePage: React.FC = () => {
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <button
-                onClick={() => navigate('/dashboard')}
+                onClick={() => navigate('/')}
                 className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors mr-4"
               >
                 <ArrowLeft className="h-5 w-5" />

@@ -19,13 +19,13 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({ currentPage }) => {
         <div className="flex items-center gap-8">
           <span
             className="text-2xl font-bold text-blue-700 cursor-pointer"
-            onClick={() => navigate('/dashboard')}
+            onClick={() => navigate('/')}
           >
             DriveLessons
           </span>
           <button
             className={`text-base font-medium hover:text-blue-700 transition-colors ${currentPage === 'dashboard' ? 'text-blue-700' : 'text-gray-700'}`}
-            onClick={() => navigate('/dashboard')}
+            onClick={() => navigate('/')}
           >
             Dashboard
           </button>
@@ -34,7 +34,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({ currentPage }) => {
           <span className="text-gray-700 font-medium hidden md:inline">Welcome back, {name}</span>
           <button
             className={`text-base font-medium hover:text-blue-700 transition-colors ${currentPage === 'profile' ? 'text-blue-700 underline' : 'text-gray-700 underline'}`}
-            onClick={() => navigate('/dashboard/profile')}
+            onClick={() => navigate('/profile')}
           >
             Edit Profile
           </button>

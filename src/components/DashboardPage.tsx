@@ -654,7 +654,7 @@ const DashboardPage: React.FC = () => {
               <h2 className="text-lg font-semibold text-gray-900">Profile Information</h2>
               <div className="flex space-x-2">
                 <button
-                  onClick={() => navigate('/dashboard/profile')}
+                  onClick={() => navigate('/profile')}
                   className="flex items-center text-blue-600 hover:text-blue-700"
                 >
                   <Edit3 className="h-4 w-4 mr-1" />
