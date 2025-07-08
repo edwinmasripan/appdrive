@@ -1,11 +1,11 @@
 //import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
-import ProtectedRoute from './components/ProtectedRoute';
+//import ProtectedRoute from './components/ProtectedRoute';
 import AuthPage from './components/AuthPage';
 import DashboardPage from './components/DashboardPage';
 import ProfilePage from './components/ProfilePage';
-import ScrollToTop from './components/ScrollToTop';
+//import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
