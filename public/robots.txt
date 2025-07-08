@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://drivelessons.com.au/sitemap.xml
+
+# Disallow admin or sensitive areas (add as needed)
+# Disallow: /admin/
+# Disallow: /api/
